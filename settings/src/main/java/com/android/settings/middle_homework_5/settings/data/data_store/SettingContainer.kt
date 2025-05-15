@@ -1,4 +1,4 @@
-package com.yandex.practicum.middle_homework_5.data.data_store
+package com.android.settings.middle_homework_5.settings.data.data_store
 
 data class SettingContainer (
     val periodic: Long,
