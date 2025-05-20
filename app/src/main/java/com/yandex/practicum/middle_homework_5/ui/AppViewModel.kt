@@ -6,11 +6,11 @@ import androidx.paging.ExperimentalPagingApi
 import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.paging.PagingData
+import com.android.settings.middle_homework_5.settings.data.data_store.SettingContainer
+import com.android.settings.middle_homework_5.settings.ui.contract.SettingsRepository
 import com.yandex.practicum.middle_homework_5.data.NewsRemoteMediator
-import com.yandex.practicum.middle_homework_5.data.data_store.SettingContainer
 import com.yandex.practicum.middle_homework_5.data.database.NewsDatabase
 import com.yandex.practicum.middle_homework_5.data.database.entity.News
-import com.yandex.practicum.middle_homework_5.ui.contract.DataStoreService
 import com.yandex.practicum.middle_homework_5.ui.contract.NewsService
 import com.yandex.practicum.middle_homework_5.ui.contract.WorkManagerService
 import kotlinx.coroutines.flow.Flow
@@ -20,7 +20,7 @@ class AppViewModel(
     private val newsService: NewsService,
     private val newsDatabase: NewsDatabase,
     private val workManagerService: WorkManagerService,
-    private val dataStoreService: DataStoreService
+    private val dataStoreService: SettingsRepository
 ) : ViewModel() {
     @OptIn(ExperimentalPagingApi::class)
     fun getNews(): Flow<PagingData<News>> =
